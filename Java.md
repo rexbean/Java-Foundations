@@ -40,7 +40,7 @@
   - Arrays
   - Collections
   - JNI
-### <div id = "primitievTypes">primitive types</div>
+### <div id = "primitiveTypes">primitive types</div>
 #### Definition
 | Types   | Size(bits) | Range                          | Default Value |
 | ------- | ---------- | ------------------------------ | ------------- |
