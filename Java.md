@@ -1,6 +1,6 @@
 # Foundations
 ## Java
-- Primitive types
+- [Primitive types](#primitiveTypes)
   - definition
   - conversion
   - Exceptions
@@ -40,7 +40,7 @@
   - Arrays
   - Collections
   - JNI
-### primitive types
+### <div id = "primitievTypes">primitive types</div>
 #### Definition
 | Types   | Size(bits) | Range                          | Default Value |
 | ------- | ---------- | ------------------------------ | ------------- |
