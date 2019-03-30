@@ -1,0 +1,2 @@
+- Memory has a heap, all objects are saved in the heap.
+- Each Thread has a JVM stack. The stack has stack frames. The frame contains the local variables.
