@@ -176,6 +176,7 @@
 - Class access modifier is has high prority than other access modifier
 - Interface access modifier is all default to be public
 - SubClass's fields and methods must have equal or high priority than the superclass
+
 | Keyword   | Class | Package | SubClass | External Package |
 | --------- | ----- | ------- | -------- | ---------------- |
 | public    | can   | can     | can      | can              |
