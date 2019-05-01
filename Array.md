@@ -14,7 +14,7 @@
 - Values are saved in a continuous memory in the heap.
   - Primitive type value will store in the memory
   - Multiple dimensional array will store the refrence to the other one demensional array in memory.
-  - Reference type will store in the other place in heap)
+  - Reference type will store in the other place in heap
 - For one demensional array, it will deep clone a new array. But for multiple demensional array, it will only copy the references.
 ## <div id = "arrays">Arrays</div>
 - Arrays is a special utility class for manipulating array. It is located in `java.util.Arrays`.
@@ -22,7 +22,7 @@
 - **Copying one demensional array** can use `Arrays.copyOf(<source>, <length>)`. This will return a new array with length. `System.arraycopy(<src>, <srcPos>, <dest>, <destPos>, <length>)`
 - **Range copying one demensional array** can use `Arrays.copyOfRange(<source>, <startIndex>, <endIndex(excluded)>)`
 #### Sorting Array
-- Arrays.sort is using quick sort algorithm with nlog(n) time complexity
+- Arrays.sort is using Dual-pivot quick sort algorithm with nlog(n) time complexity on many data sets that cause other quicksorts to degrade to quadratic performance, and is typically faster than traditional (one-pivot) Quicksort implementations.
 - **Sorting array of primitive Type** can use `Arrays.sort(<source>)`
 - **Sorting array of Object** can use `Arrays.sort(<source>, <Comparator>)`
 #### Filling Array
