@@ -42,6 +42,7 @@
 - [Abstraction](#abstraction)
   - [Abstract class](#abstractClass)
   - [Interface](#interface)
+- [Varargs](#varargs)
 - Classes
   - Enum
   - Integer
@@ -110,6 +111,13 @@
   - **For reference variable** The variable can be re-assgined a new object. But it's state can be changed.
 - `final` and `static`
 
+#### <div id = "finalize">finalize</div>
+- `finalize()` method will be called by **garbage collector** to do the **clean-up activity** which means closing the resources associated with the object. In other word, it will be called when the object is going to be deleted/destroyed
+- `finalize()` method is in the **Object** class, so every object can override this method
+- If the object of the class which has overriden the `finalize()` method has no reference(which can be done by assigning it to `null`), then `finalize()` method will be called by the **garbage collector**.
+- `finalize()` can be invoked as a normal method of the object, but it won't ignore the **unchecked exception**, which means abnormal exit.
+- When `finalize()` called by the `System.gc()` (but it is up-to the garbage collector), it will igonre the **unchecked exception**. If it has corresponding catch, the exception won't be ignored.
+
 #### <div id = "implements">implements</div>
 - `implements` is used while implements an interface.
 #### <div id = "import">import</div>
@@ -169,8 +177,6 @@
 - When `volatile` is used, the variable will be read and write from the **main memroy**
 
 
-### <div id = "enumeration">Enumeration</div>
-
 ### <div id ="accessModifier">Acess Modifiers</div>
 - Class can only use public and default
 - Class access modifier is has high prority than other access modifier
@@ -184,6 +190,10 @@
 | default   | can   | can     | cannot   | cannot           |
 | private   | can   | cannot  | cannot   | cannot           |
 ### Class
+#### <div id = "initializerBlock">initializer block</div>
+- There are two kinds of initializer blocks, one is **static** the other is **normal**
+- **Static initializer block** will only be called once when the class is being loaded by the JVM.
+- **Normal initializer block** will be called whenever the class is being instantiated. They will be called in order after the static initializer block and before the constructor.
 #### <div id = "inheritance">Inheritance</div>
 - A class can inherit another class, the first class is the subclass, the second one is superclass
 - **Casting** reference a object of class as a different type than the class itself is called type casting
@@ -200,7 +210,7 @@
     ```
 
 
-#### <div id = "abstractClass">Abstrac Class</div>
+#### <div id = "abstractClass">Abstract Class</div>
 - Abstract means imcompleted. It can be **abstract class** and **abstract method**.
 - Abstract class **may or may not** have abstract methods.
 - **ANY** abstract class **cannot be instantiated**, it can only **be inherited**.
@@ -353,7 +363,14 @@ public static void main(String[] args){
 - The implemented methods must be **public**
 - Default method can be a default implementation of a method. User's implementation can override it.
 - Interface can have a **static method** and call it as the static method in a class.
--
+
+### <div id = "varargs">varargs:Variable Arguments</div>
+- **Varargs** is used to simplifie the creation of the method which need to take variable number of arguments
+- **Varargs** is specified by ...
+- **Varargs** can receive 0 or more arguments and then will be stored in the one dimension array.
+- A method can only have one **Varargs** with the same type and **varargs** must be the last arguments of the method
+- The method with fixed arguments will have high priority to be invoked
+
 ### <div id = "collections">Collections</div>
 
 ### Storage and Initialize
